@@ -4,6 +4,7 @@
 set -e
 # Lets write the public key of our aws instance
 eval $(ssh-agent -s)
+chmod +x /root/.ssh/id_rsa
 echo -e "$PRIVATE_KEY" > /root/.ssh/id_rsa
 chmod 600 /root/.ssh/id_rsa
 
